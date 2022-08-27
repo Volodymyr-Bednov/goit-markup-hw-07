@@ -41,7 +41,8 @@ input {
   padding-right: 0;
 }
 
-.no-decor {
+/* .no-decor */
+a {
   text-decoration: none;
 }
 
@@ -79,16 +80,26 @@ input {
   display: block;
 }
 
+.event-link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.event-link:hover,
+.event-link:focus {
+  color: var(--accent-color);
+}
+
 /* ----------------- HEADER ----------------- */
 .page-header {
   border-bottom: 1px solid #ececec;
 }
 
-.page-header .container {
+.page-header__body {
   display: flex;
   align-items: center;
 }
-.logo-link {
+.logo {
   display: block;
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -98,27 +109,22 @@ input {
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
-.page-header .logo-link {
+.logo__top-element {
   margin-right: 92px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
-.logo-header {
+.logo--dark {
   color: var(--header-logo-color);
 }
 
-.nav-links {
+.site-nav {
   display: flex;
   column-gap: 50px;
-}
-.nav-contacts {
-  display: flex;
-  column-gap: 50px;
-  margin-left: auto;
 }
 
-.link-item {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -130,7 +136,7 @@ input {
   color: var(--title-text-color);
 }
 
-.link-item::after {
+.site-nav__link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -147,7 +153,12 @@ input {
   opacity: 1;
 }
 
-.link-contact {
+.contacts {
+  display: flex;
+  column-gap: 50px;
+  margin-left: auto;
+}
+.contacts__link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -160,19 +171,9 @@ input {
   color: var(--primary-text-color);
 }
 
-.icon-nav {
+.contacts__icon {
   /* margin-right: 10px; */
   fill: currentColor;
-}
-
-.event-link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.event-link:hover,
-.event-link:focus {
-  color: var(--accent-color);
 }
 
 /* ----------------- MAIN ----------------- */
@@ -350,17 +351,18 @@ input {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-.icon-soc-list {
+
+.social-nets {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.icon-soc-item {
+.social-nets__item {
   width: 44px;
   height: 44px;
 }
-.icon-soc-link {
+.social-nets__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,18 +377,17 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-soc-link:hover,
-.icon-soc-link:focus {
+.social-nets__link:hover,
+.social-nets__link:focus {
   background-color: var(--accent-color);
   color: var(--white-text-color);
 }
-.icon {
-  /* margin-right: 10px; */
+.social-nets__icon {
   fill: currentColor;
 }
 
 /* CLIENTS SECTION */
-.clients-titel {
+.clients__titel {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -395,16 +396,16 @@ input {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-.client-list {
+.clients__list {
   display: flex;
   gap: 30px;
 }
 
-.client-list-item {
+.clients__item {
   width: 170px;
   height: 92px;
 }
-.client-link {
+.clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -419,10 +420,14 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-link:hover,
-.client-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
+}
+
+.clients__icon {
+  fill: currentColor;
 }
 
 /* ----------------- PORTFOLIO ----------------- */
@@ -543,26 +548,47 @@ input {
   background: var(--secondary-background);
 }
 
+.footer-pege__element {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-address-wrap {
   width: calc((50% - 45px) / 2);
   margin-right: 30px;
   /* margin-right: 70px; */
 }
-.logo-footer {
-  color: var(--footer-logo-color);
-}
 
-.footer-pege .logo-link {
-  display: inline-block;
+.logo__bottom-element {
   margin-bottom: 20px;
 }
 
-.footer-pege .container {
-  display: flex;
-  align-items: baseline;
+.logo--light {
+  color: var(--footer-logo-color);
 }
 
-.footer-soc-titel {
+.contacts-list__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.contacts-list__link {
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--white-text-color);
+}
+
+.color--grey {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-soc-wrap {
+  width: calc((50% - 45px) / 2);
+  margin-right: 30px;
+}
+
+.footer-soc-wrap__titel {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -571,54 +597,24 @@ input {
   color: var(--white-text-color);
   margin-bottom: 20px;
 }
-
-.contact-address {
-  display: inline-block;
-  margin-bottom: 9px;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--white-text-color);
-}
-
-.contacts-list-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.contacts-item {
-  display: inline-block;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-soc-wrap {
-  width: calc((50% - 45px) / 2);
-  margin-right: 30px;
-  /* margin-right: 93px; */
-}
-.footer-soc-wrap > .icon-soc-list {
+.footer-social-nets {
   justify-content: start;
 }
-.footer-soc-link {
+.footer-social-nets__link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white-text-color);
 }
 
-.footer-subscribe-wrap {
+.form-subscribe {
   display: flex;
   align-items: flex-end;
   width: calc(50% - 15px);
-  /* padding-left: 15px; */
 }
-.subscribe-mail {
+.subscribe {
   width: 100%;
   margin-right: 12px;
 }
-.lable-subscribe {
+.subscribe__lable {
   display: block;
   margin-bottom: 20px;
 
@@ -630,7 +626,7 @@ input {
 
   color: var(--white-text-color);
 }
-.input-subscribe {
+.subscribe__input {
   display: flex;
   align-items: center;
   width: 100%;
@@ -650,7 +646,7 @@ input {
   background-color: transparent;
 }
 
-.btn-subscribe {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -664,12 +660,12 @@ input {
   cursor: pointer;
 }
 
-.btn-subscribe:hover,
-.btn-subscribe:focus {
+.button:hover,
+.button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.text-btn-subscribe {
+.button__text {
   padding-left: 4px;
   margin-right: 10px;
   font-weight: 700;
@@ -680,7 +676,7 @@ input {
   text-align: center;
   color: #ffffff;
 }
-.icon-send {
+.button__icon {
   fill: #ffffff;
 }
 /* ----------------- MODAL ----------------- */
