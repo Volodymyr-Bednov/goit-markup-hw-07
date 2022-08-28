@@ -18,7 +18,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -72,8 +73,8 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="hero-titel">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-btn" type="button" data-modal-open>
+          <h1 class="hero__titel">Ефективні рішення для вашого бізнесу</h1>
+          <button class="hero__btn button" type="button" data-modal-open>
             Замовити послугу
           </button>
         </div>
@@ -134,11 +135,11 @@
       </section>
       <section class="about section">
         <div class="container">
-          <h2 class="about-header">Чим ми займаємося</h2>
-          <ul class="about-list list">
-            <li class="about-item">
+          <h2 class="about__header">Чим ми займаємося</h2>
+          <ul class="about__list list">
+            <li class="about__item">
               <img
-                class="about-image photo-no-line"
+                class="photo"
                 src="./images/photobox-1.jpg"
                 alt="Розробка"
                 width="370"
@@ -146,9 +147,9 @@
               />
               <p class="about-lable">Десктопні додатки</p>
             </li>
-            <li class="about-item">
+            <li class="about__item">
               <img
-                class="about-image photo-no-line"
+                class="photo"
                 src="./images/photobox-2.jpg"
                 alt="Адаптація"
                 width="370"
@@ -156,9 +157,9 @@
               />
               <p class="about-lable">Мобільні додатки</p>
             </li>
-            <li class="about-item">
+            <li class="about__item">
               <img
-                class="about-image photo-no-line"
+                class="photo"
                 src="./images/photobox-3.jpg"
                 alt="Дизайн"
                 width="370"
@@ -171,20 +172,20 @@
       </section>
       <section class="team section">
         <div class="container">
-          <h2 class="team-header">Наша команда</h2>
-          <ul class="team-list list">
-            <li class="team-item">
+          <h2 class="team__header">Наша команда</h2>
+          <ul class="team__list list">
+            <li class="team__item">
               <img
-                class="photo-no-line about-photo"
+                class="photo"
                 src="./images/photo-command-1.jpg"
                 lang="en"
                 alt="Product Designer"
                 width="270"
                 height="260"
               />
-              <div class="team-text">
-                <h3 class="team-member">Ігор Дем'яненко</h3>
-                <p class="member-info" lang="en">Product Designer</p>
+              <div class="team__text">
+                <h3 class="team__member">Ігор Дем'яненко</h3>
+                <p class="team__info" lang="en">Product Designer</p>
                 <ul class="social-nets list">
                   <li class="social-nets__item">
                     <a href="" class="social-nets__link">
@@ -217,18 +218,18 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item">
+            <li class="team__item">
               <img
-                class="photo-no-line about-photo"
+                class="photo"
                 src="./images/photo-command-2.jpg"
                 lang="en"
                 alt="Frontend Developer"
                 width="270"
                 height="260"
               />
-              <div class="team-text">
-                <h3 class="team-member">Ольга Рєпіна</h3>
-                <p class="member-info" lang="en">Frontend Developer</p>
+              <div class="team__text">
+                <h3 class="team__member">Ольга Рєпіна</h3>
+                <p class="team__info" lang="en">Frontend Developer</p>
                 <ul class="social-nets list">
                   <li class="social-nets__item">
                     <a href="" class="social-nets__link">
@@ -261,18 +262,18 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item">
+            <li class="team__item">
               <img
-                class="photo-no-line about-photo"
+                class="photo"
                 src="./images/photo-command-3.jpg"
                 lang="en"
                 alt="Marketing"
                 width="270"
                 height="260"
               />
-              <div class="team-text">
-                <h3 class="team-member">Микола Тарасов</h3>
-                <p class="member-info" lang="en">Marketing</p>
+              <div class="team__text">
+                <h3 class="team__member">Микола Тарасов</h3>
+                <p class="team__info" lang="en">Marketing</p>
                 <ul class="social-nets list">
                   <li class="social-nets__item">
                     <a href="" class="social-nets__link">
@@ -305,18 +306,18 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item">
+            <li class="team__item">
               <img
-                class="photo-no-line about-photo"
+                class="photo"
                 src="./images/photo-command-4.jpg"
                 lang="en"
                 alt="UI Designer"
                 width="270"
                 height="260"
               />
-              <div class="team-text">
-                <h3 class="team-member">Михайло Єрмаков</h3>
-                <p class="member-info" lang="en">UI Designer</p>
+              <div class="team__text">
+                <h3 class="team__member">Михайло Єрмаков</h3>
+                <p class="team__info" lang="en">UI Designer</p>
                 <ul class="social-nets list">
                   <li class="social-nets__item">
                     <a href="" class="social-nets__link">
@@ -488,7 +489,7 @@
             />
           </div>
           <div>
-            <button type="submit" class="button">
+            <button type="submit" class="subscribe__button button">
               <span class="button__text">Підписатися</span>
               <svg class="button__icon" width="24px" height="24px">
                 <use href="./images/icons.svg#icon-send"></use>
